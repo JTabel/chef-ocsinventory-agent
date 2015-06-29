@@ -1,6 +1,10 @@
 ocsinventory-agent CHANGELOG
 ============================
 
+2.0.0
+-----
+- Dennis Pattmann - Renamed cookbook from ocsinventory to ocsinventory-agent
+
 1.0.1
 -----
 - Dennis Pattmann - Created documentation
