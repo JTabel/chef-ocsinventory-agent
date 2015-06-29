@@ -1,4 +1,4 @@
-# ocsinventory Cookbook
+# ocsinventory-agent Cookbook
 
 This cookbook installs and configure ocsinventory-agent
 

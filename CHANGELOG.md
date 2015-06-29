@@ -1,5 +1,5 @@
-ocsinventory CHANGELOG
-======================
+ocsinventory-agent CHANGELOG
+============================
 
 1.0.1
 -----

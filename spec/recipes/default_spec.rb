@@ -1,6 +1,6 @@
 require_relative '../spec_helper'
 
-describe 'ocsinventory::default' do
+describe 'ocsinventory-agent::default' do
   describe 'Ubuntu 14.04' do
     let(:chef_run) do
       env_options = { platform: 'ubuntu', version: '14.04' }
