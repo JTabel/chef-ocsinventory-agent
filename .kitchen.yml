@@ -14,4 +14,4 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[ocsinventory::default]
+      - recipe[ocsinventory-agent::default]

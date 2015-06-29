@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: ocsinventory
+# Cookbook Name:: ocsinventory-agent
 # Recipe:: _yumrepo
 #
 # Copyright 2015, Bigpoint GmbH

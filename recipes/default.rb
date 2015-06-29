@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: ocsinventory
+# Cookbook Name:: ocsinventory-agent
 # Recipe:: default
 #
 # Copyright 2015, Bigpoint GmbH
@@ -18,7 +18,7 @@
 #
 
 # We need to add the EPEL repo to have a ocsinventory-agent package
-include_recipe 'ocsinventory::_yumrepo' if platform_family?('rhel')
+include_recipe 'ocsinventory-agent::_yumrepo' if platform_family?('rhel')
 
 # Package install
 package node['ocsinventory']['agent']['package'] do
