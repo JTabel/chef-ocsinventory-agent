@@ -1,59 +1,45 @@
-ocsinventory Cookbook
-=====================
-TODO: Enter the cookbook description here.
+# ocsinventory Cookbook
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook installs and configure ocsinventory-agent
 
-Requirements
-------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+## Requirements
 
-e.g.
-#### packages
-- `toaster` - ocsinventory needs toaster to brown your bagel.
+### Supported Platforms
 
-Attributes
-----------
-TODO: List your cookbook attributes here.
+The following 64-bit platforms are supported:
 
-e.g.
-#### ocsinventory::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['ocsinventory']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+* CentOS 7.0
+* Ubuntu 14.04 LTS
 
-Usage
------
-#### ocsinventory::default
-TODO: Write usage instructions for each cookbook.
+### Cookbooks
 
-e.g.
-Just include `ocsinventory` in your node's `run_list`:
+* [apt](https://supermarket.getchef.com/cookbooks/apt) Chef LWRP Cookbook
+* [yum](https://supermarket.getchef.com/cookbooks/yum) Chef LWRP Cookbook
+
+## Attributes
+
+| attribute                                  | Type      | Default                    | description                              |
+|:-------------------------------------------|:---------:|:--------------------------:|:-----------------------------------------|
+| `node['ocsinventory']['agent']['package']` | `String`  | `ocsinventory-agent`       | ocsinventory-agent package               |
+| `node['ocsinventory']['agent']['server'] ` | `String`  | `localhost`                | OCS-Server address                       |
+| `node['ocsinventory']['agent']['tag']`     | `String`  | `''`                       | Client Tag                               |
+
+## Usage
+
+#### ocsinventory-agent::default
+
+Just include `ocsinventory-agent` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[ocsinventory]"
+    "recipe[ocsinventory-agent]"
   ]
 }
 ```
 
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
+## Contributing
 
 e.g.
 1. Fork the repository on Github
@@ -63,6 +49,18 @@ e.g.
 5. Run the tests, ensuring they all pass
 6. Submit a Pull Request using Github
 
-License and Authors
--------------------
-Authors: TODO: List authors
+## License and Authors
+
+Copyright 2015, Dennis Pattmann
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
