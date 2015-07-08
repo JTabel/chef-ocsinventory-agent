@@ -11,3 +11,4 @@ supports 'centos'
 
 depends 'apt'
 depends 'yum'
+depends 'yum-epel'

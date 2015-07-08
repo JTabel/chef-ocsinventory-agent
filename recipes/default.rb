@@ -18,7 +18,7 @@
 #
 
 # We need to add the EPEL repo to have a ocsinventory-agent package
-include_recipe 'ocsinventory-agent::_yumrepo' if platform_family?('rhel')
+include_recipe 'yum-epel' if platform_family?('rhel')
 
 # Package install
 package node['ocsinventory']['agent']['package'] do
